@@ -1,0 +1,95 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+body {
+    background-color: black;
+
+}
+
+#heading {
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    text-align: center;
+    width: 100%;
+    height: 10rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+section {
+    display: flex;
+    align-content: center;
+    color: aliceblue;
+    justify-content: center;
+}
+
+.wheather {
+    color: aliceblue;
+    display: flex;
+    justify-content: space-around;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.temp {
+    margin: 20px;
+    font-size: larger;
+
+}
+
+footer {
+    height: 100px;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background-color: rgba(180, 177, 177, 0.202);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.searchField {
+    font-size: 1.5rem;
+    color: white;
+    background-color: transparent;
+    padding: 1rem;
+    border: none;
+    border-bottom: 2px solid white;
+    width: 79%;
+}
+
+button {
+
+    background-color: rgb(20, 93, 68);
+    font-size: 1.1rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5%;
+    width: 5rem;
+    height: 5rem;
+}
+
+.condition {
+    display: flex;
+    font-size: large;
+    height: 5rem;
+    width: 5rem;
+}
+
+img {
+    height: 5rem;
+    width: 5rem;
+}
+
+.lstupdate {
+    text-align: right;
+    margin-left: 20px;
+}
