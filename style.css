@@ -15,24 +15,44 @@ body {
     font-weight: bolder;
     text-align: center;
     width: 100%;
-    height: 10rem;
+    height: 5rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.Container_wheather {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 70%;
+    width: 50%;
+    margin-top: 50px;
+
 }
 
 section {
     display: flex;
-    align-content: center;
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     justify-content: center;
+    background-image: url('Image/rainy-pictures-cfvnyn34l23ggvq1.jpg');
+    background-size: cover;
+    height: 70%;
 }
 
 .wheather {
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-around;
     font-size: xx-large;
     font-family: 'Times New Roman', Times, serif;
+    align-items: center;
 
+}
+
+.day {
+    font-size: smaller;
+    width: auto;
 }
 
 .temp {
@@ -42,9 +62,8 @@ section {
 }
 
 footer {
-    height: 100px;
+    height: 30%px;
     padding: 1rem 0;
-    position: absolute;
     bottom: 0px;
     width: 100%;
     background-color: rgba(180, 177, 177, 0.202);
@@ -81,7 +100,10 @@ button {
     display: flex;
     font-size: large;
     height: 5rem;
-    width: 5rem;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+
 }
 
 img {
@@ -92,4 +114,6 @@ img {
 .lstupdate {
     text-align: right;
     margin-left: 20px;
+
+
 }

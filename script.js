@@ -1,5 +1,11 @@
-const target = 'Mumbai'
+const target_DEfault = 'Pune'
 
+var pageLoaded = false;
+
+document.addEventListener('DOMContentLoaded', function () {
+    pageLoaded = true;
+    fetchLocation(target_DEfault);
+});
 async function fetchLocation(target) {
     try {
         const url = `https://api.weatherapi.com/v1/current.json?key=2a9b08dcd88f4fcc869181241240704&q=${target}&aqi=yes`
@@ -16,9 +22,12 @@ async function fetchLocation(target) {
 
         updateDOM(currentTemp, location, localTime, icon, condition, lastupdate)
         console.log(currentTemp, localTime, location, icon, lastupdate)
+        updateImage(condition)
+
     }
     catch (error) {
         console.log(error)
+        alert("Location Not Found");
     }
 }
 
@@ -58,7 +67,49 @@ function updateDOM(currentTemp, location, localTime, icon, condition, lastupdate
 
     dateField.innerText = `${exacTime} ${exactday} ${exactdate}`
 
+
 }
+const weatherSection = document.getElementById("mainSection");// checking wheather condition
+
+function updateImage(condition) { // updating background image
+    switch (condition) {
+        case 'Clear':
+            weatherSection.style.backgroundImage = "url('Image/clear.jpg')";
+            break;
+        case 'Sunny':
+            weatherSection.style.backgroundImage = "url('Image/Sunny.jpg')";
+            break;
+        case 'Cloudy':
+        case 'Partly cloudy':
+            weatherSection.style.backgroundImage = "url('image/PartlyCloudy.jpg')";
+            break;
+        case 'Rain':
+        case 'Drizzle':
+            weatherSection.style.backgroundImage = "url('image/rainy.jpg')";
+            break;
+        case 'Thunderstorm':
+            weatherSection.style.backgroundImage = "url('image/images (2).jpeg')";
+            break;
+        case 'Snow':
+            weatherSection.style.backgroundImage = "url('image/snowy.jpeg')";
+            break;
+        case 'Mist':
+        case 'Smoke':
+        case 'Haze':
+        case 'Dust':
+        case 'Fog':
+        case 'Sand':
+        case 'Ash':
+            weatherSection.style.backgroundImage = "url('image/Mist.jpg')";
+            break;
+        default:
+            weatherSection.style.backgroundImage = "url('image/default.jpg')";
+            break;
+    }
+
+}
+
+// getting days 
 function days(day) {
     switch (day) {
         case 0: return "Sunday"
