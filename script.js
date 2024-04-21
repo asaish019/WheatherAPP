@@ -33,6 +33,7 @@ async function fetchLocation(target) {
 
 //fetchLocation(target)
 
+
 const form = document.querySelector("form")
 const Searchloc = document.querySelector('.searchField');
 const temp = document.querySelector(".temp")
@@ -51,6 +52,12 @@ function search(e) {
     const target = Searchloc.value;
     fetchLocation(target)
 }
+
+const refresh = document.getElementById("refresh");
+refresh.addEventListener('click', function () {
+    const target = Searchloc.value;
+    fetchLocation(target);
+})
 
 function updateDOM(currentTemp, location, localTime, icon, condition, lastupdate) {
     temp.innerHTML = `${currentTemp}&deg;C`;
@@ -122,3 +129,4 @@ function days(day) {
     }
 
 }
+

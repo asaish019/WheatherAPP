@@ -117,3 +117,7 @@ img {
 
 
 }
+
+#refresh:hover {
+    color: rgb(46, 109, 254);
+}
