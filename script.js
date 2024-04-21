@@ -88,17 +88,17 @@ function updateImage(condition) { // updating background image
             break;
         case 'Cloudy':
         case 'Partly cloudy':
-            weatherSection.style.backgroundImage = "url('image/PartlyCloudy.jpg')";
+            weatherSection.style.backgroundImage = "url('Image/PartlyCloudy.jpg')";
             break;
         case 'Rain':
         case 'Drizzle':
-            weatherSection.style.backgroundImage = "url('image/rainy.jpg')";
+            weatherSection.style.backgroundImage = "url('Image/rainy.jpg')";
             break;
         case 'Thunderstorm':
-            weatherSection.style.backgroundImage = "url('image/images (2).jpeg')";
+            weatherSection.style.backgroundImage = "url('Image/images (2).jpeg')";
             break;
         case 'Snow':
-            weatherSection.style.backgroundImage = "url('image/snowy.jpeg')";
+            weatherSection.style.backgroundImage = "url('Image/snowy.jpeg')";
             break;
         case 'Mist':
         case 'Smoke':
@@ -107,10 +107,10 @@ function updateImage(condition) { // updating background image
         case 'Fog':
         case 'Sand':
         case 'Ash':
-            weatherSection.style.backgroundImage = "url('image/Mist.jpg')";
+            weatherSection.style.backgroundImage = "url('Image/Mist.jpg')";
             break;
         default:
-            weatherSection.style.backgroundImage = "url('image/default.jpg')";
+            weatherSection.style.backgroundImage = "url('Image/default.jpg')";
             break;
     }
 
